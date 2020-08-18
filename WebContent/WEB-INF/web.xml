@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Project3</display-name>
+  
+    
+  <!--초기화 파라미터   -->
+  <!-- 마리아DB 드라이버와 연결정보 배포용-->
+  <context-param>
+  	<param-name>MariaJDBCDriverWeb</param-name>
+  	<param-value>org.mariadb.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>MariaConnectURLWeb</param-name>
+  	<param-value>jdbc:mariadb://localhost:3306/dbwodud89</param-value>
+  </context-param>
+  
+  <!-- 마리아DB 드라이버와 연결정보 로컬용 -->
+  <context-param>
+  	<param-name>MariaJDBCDriverLocal</param-name>
+  	<param-value>org.mariadb.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>MariaConnectURLLocal</param-name>
+  	<param-value>jdbc:mariadb://localhost:3306/suamil_db</param-value>
+  </context-param>
+  
+  
+<!-- 게시판 페이지처리에 사용할 상수 -->
+  <context-param>
+  	<param-name>PAGE_SIZE</param-name>
+  	<param-value>5</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>BLOCK_PAGE</param-name>
+  	<param-value>5</param-value>
+ </context-param>
+
+
+
+
+
+
+<!--메인화면 매핑 --><!-- 
+<servlet>
+	<servlet-name>MainController</servlet-name>
+	<servlet-class>controller.MainCtrl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>MainController</servlet-name>
+	<url-pattern>/main/main.do</url-pattern>
+</servlet-mapping>
+ -->
+ 
+ <!--로그아웃 -->
+<!-- <servlet>
+	<servlet-name>LogoutController</servlet-name>
+	<servlet-class>controller.LogoutCtrl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>LogoutController</servlet-name>
+	<url-pattern>/main/Logout.do</url-pattern>
+</servlet-mapping> -->
+
+  
+  
+<!--회원가입  -->
+<!-- 
+<servlet>
+	<servlet-name>SignUpController</servlet-name>
+	<servlet-class>controller.SignUpCtrl</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>SignUpController</servlet-name>
+	<url-pattern>/member/SignUp.do</url-pattern>
+</servlet-mapping>
+ -->
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
